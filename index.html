@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ajay Kalakota — Full Stack Developer</title>
+  <meta name="description" content="Ajay Kalakota — Full Stack Developer in Hyderabad, India. Building enterprise CPaaS and omnichannel messaging platforms with Angular, React, Next.js, Node.js and PostgreSQL." />
+  <meta name="author" content="Ajay Kalakota" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ajay Kalakota — Full Stack Developer" />
+  <meta property="og:description" content="Full Stack Developer building enterprise CPaaS platforms serving 500+ clients and 10M+ messages per month." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='system-ui' font-weight='bold' fill='%232563eb'>A</text></svg>" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#hero" class="nav__logo" aria-label="Home">
+        Ajay<span class="accent">.</span>
+      </a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Main navigation">
+        <a href="#about" class="nav__link">About</a>
+        <a href="#skills" class="nav__link">Skills</a>
+        <a href="#experience" class="nav__link">Experience</a>
+        <a href="#projects" class="nav__link">Projects</a>
+        <a href="#education" class="nav__link">Education</a>
+        <a href="#contact" class="nav__link">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <a href="assets/Ajay-Kalakota-Full-Stack-Developer.pdf" download class="btn btn--sm btn--primary nav__resume">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5M12 15V3"/></svg>
+          <span class="nav__resume-label">Resume</span>
+        </a>
+
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <button class="icon-btn nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <!-- Scroll progress, drawn as a stroke around the pill.
+         pathLength="100" normalises the perimeter to 100 units, so the dash maths
+         stays correct at any nav width without measuring anything in JS. -->
+    <svg class="nav__ring" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="navRingGradient" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#3b82f6" />
+          <stop offset="50%" stop-color="#6366f1" />
+          <stop offset="100%" stop-color="#8b5cf6" />
+        </linearGradient>
+      </defs>
+      <rect id="navProgress" class="nav__ring-fill"
+            x="1" y="1" width="100%" height="100%"
+            rx="32" ry="32" pathLength="100" />
+    </svg>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="hero__grid-bg" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__badge">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            Available for full-time &amp; freelance work
+          </p>
+
+          <h1 class="hero__title">
+            Hi, I'm <span class="gradient-text">Ajay Kalakota</span>
+          </h1>
+
+          <h2 class="hero__subtitle">
+            <span class="typed" id="typed"></span><span class="cursor" aria-hidden="true">|</span>
+          </h2>
+
+          <p class="hero__desc">
+            Full Stack Developer with <strong><span data-exp="years">1.5</span>+ years</strong> of experience building enterprise web
+            applications. I design and ship <strong>Telinfy</strong> — an omnichannel CPaaS platform
+            serving <strong>500+ business clients</strong> and processing <strong>10M+ messages every month</strong>
+            across WhatsApp, RCS, SMS and Voice.
+          </p>
+
+          <div class="hero__cta">
+            <a href="assets/Ajay-Kalakota-Full-Stack-Developer.pdf" download class="btn btn--primary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5M12 15V3"/></svg>
+              Download Resume
+            </a>
+            <a href="#projects" class="btn btn--ghost">
+              View My Work
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#contact" class="btn btn--ghost">Get In Touch</a>
+          </div>
+
+          <div class="hero__socials">
+            <a href="https://github.com/ajaykalakoti" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.010 0c2.28-1.55 3.29-1.23 3.29-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/ajay-kalakota-b8051227a" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+            </a>
+            <a href="mailto:ajaykalakoti34@gmail.com" class="social-link" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </a>
+            <a href="tel:+917337522120" class="social-link" aria-label="Phone">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="code-card">
+            <div class="code-card__bar">
+              <span class="dot dot--red"></span>
+              <span class="dot dot--yellow"></span>
+              <span class="dot dot--green"></span>
+              <span class="code-card__file">developer.js</span>
+            </div>
+            <pre class="code-card__body"><code><span class="c-key">const</span> <span class="c-var">ajay</span> = {
+  <span class="c-prop">role</span>: <span class="c-str">'Full Stack Developer'</span>,
+  <span class="c-prop">location</span>: <span class="c-str">'Hyderabad, India'</span>,
+  <span class="c-prop">frontend</span>: [<span class="c-str">'Angular'</span>, <span class="c-str">'React'</span>, <span class="c-str">'Next.js'</span>],
+  <span class="c-prop">backend</span>: [<span class="c-str">'Node.js'</span>, <span class="c-str">'Express'</span>],
+  <span class="c-prop">database</span>: [<span class="c-str">'MySQL'</span>, <span class="c-str">'PostgreSQL'</span>],
+  <span class="c-prop">queues</span>: [<span class="c-str">'RabbitMQ'</span>],
+  <span class="c-prop">scale</span>: <span class="c-str">'10M+ msgs / month'</span>,
+  <span class="c-prop">shipping</span>: <span class="c-key">true</span>
+};</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="stats" id="stats">
+          <div class="stat">
+            <div class="stat__num"><span class="count" data-exp="stat" data-target="1.5" data-decimals="1">0</span><span class="stat__suffix">+</span></div>
+            <div class="stat__label">Years Experience</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num"><span class="count" data-target="500">0</span><span class="stat__suffix">+</span></div>
+            <div class="stat__label">Business Clients</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num"><span class="count" data-target="10">0</span><span class="stat__suffix">M+</span></div>
+            <div class="stat__label">Messages / Month</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num"><span class="count" data-target="4">0</span></div>
+            <div class="stat__label">Channels Unified</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__eyebrow">01 — About</span>
+          <h2 class="section__title">Building things that scale</h2>
+        </div>
+
+        <div class="about">
+          <div class="about__main">
+            <div class="about__text reveal">
+              <p class="about__lead">
+                I build the parts of a product that nobody sees and the parts everybody uses —
+                and I like that the same person owns both.
+              </p>
+              <p>
+                I'm a Full Stack Developer based in <strong>Hyderabad, Telangana</strong>, currently at
+                <strong>GreenAds Global</strong> where I build and maintain <strong>Telinfy</strong>, an
+                enterprise CPaaS and omnichannel messaging platform.
+              </p>
+              <p>
+                My day-to-day spans the whole stack — designing RESTful APIs in <strong>Node.js</strong> and
+                <strong>Express</strong>, modelling data in <strong>MySQL</strong> and <strong>PostgreSQL</strong>,
+                wiring up <strong>RabbitMQ</strong> for high-throughput async processing, and building
+                responsive client dashboards in <strong>Angular</strong>, <strong>React</strong> and
+                <strong>Next.js</strong>.
+              </p>
+              <p>
+                I care about features that work end to end: from the database schema, through the API and
+                message queue, to the button the client actually clicks. I've integrated the
+                <strong>Meta WhatsApp Business API</strong>, <strong>JBM for RCS</strong> and SMS gateways,
+                and debugged plenty of production delivery issues over SSH at 2am.
+              </p>
+              <p>
+                I work fast with modern AI tooling — <strong>Cursor</strong>, <strong>Claude Code</strong>
+                and <strong>ChatGPT</strong> are part of my daily workflow for building, reviewing and
+                debugging. Outside my full-time role I take on <strong>freelance projects</strong> and
+                <strong>website builds</strong>.
+              </p>
+            </div>
+
+            <!-- Quick-scan panel: the facts a recruiter checks first. -->
+            <aside class="snapshot reveal">
+              <h3 class="snapshot__title">
+                <span class="pulse-dot" aria-hidden="true"></span>
+                At a glance
+              </h3>
+
+              <dl class="snapshot__list">
+                <div class="snapshot__row">
+                  <dt>Role</dt>
+                  <dd>Full Stack Developer</dd>
+                </div>
+                <div class="snapshot__row">
+                  <dt>Company</dt>
+                  <dd>GreenAds Global</dd>
+                </div>
+                <div class="snapshot__row">
+                  <dt>Product</dt>
+                  <dd><span class="snapshot__hl">Telinfy</span> — CPaaS</dd>
+                </div>
+                <div class="snapshot__row">
+                  <dt>Experience</dt>
+                  <dd><span data-exp="duration">1 yr 7 mo</span> <span class="snapshot__since">since Dec 2024</span></dd>
+                </div>
+                <div class="snapshot__row">
+                  <dt>Team</dt>
+                  <dd>5-engineer Agile squad</dd>
+                </div>
+                <div class="snapshot__row">
+                  <dt>Education</dt>
+                  <dd>B.Tech CSE (AI &amp; ML), 2024</dd>
+                </div>
+                <div class="snapshot__row">
+                  <dt>Location</dt>
+                  <dd>Hyderabad, India</dd>
+                </div>
+                <div class="snapshot__row">
+                  <dt>Languages</dt>
+                  <dd>English · Hindi · Telugu</dd>
+                </div>
+                <div class="snapshot__row">
+                  <dt>Open to</dt>
+                  <dd>Full-time · Freelance</dd>
+                </div>
+              </dl>
+
+              <a href="#contact" class="snapshot__cta">
+                Let's work together
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </aside>
+          </div>
+
+          <div class="about__cards">
+            <article class="info-card reveal">
+              <div class="info-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4M6 8l-4 4 4 4M14.5 4l-5 16"/></svg>
+              </div>
+              <h3>Full Stack Ownership</h3>
+              <p>Front-end, back-end and database layers — features delivered end to end across the full SDLC.</p>
+            </article>
+
+            <article class="info-card reveal">
+              <div class="info-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
+              </div>
+              <h3>APIs &amp; Integrations</h3>
+              <p>RESTful API design, webhooks, and third-party integrations — WhatsApp Business API, RCS, SMS gateways.</p>
+            </article>
+
+            <article class="info-card reveal">
+              <div class="info-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5M3 12a9 3 0 0 0 18 0"/></svg>
+              </div>
+              <h3>Data &amp; Queues</h3>
+              <p>Relational design in MySQL/PostgreSQL and queue-based architecture with RabbitMQ for async throughput.</p>
+            </article>
+
+            <article class="info-card reveal">
+              <div class="info-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <h3>Agile Delivery</h3>
+              <p>Scrum ceremonies, code reviews and requirement discussions in a tight 5-engineer team.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section section--alt" id="skills">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__eyebrow">02 — Skills</span>
+          <h2 class="section__title">Technical toolkit</h2>
+          <p class="section__sub">The languages, frameworks and tools I reach for every day.</p>
+        </div>
+
+        <div class="skills-tabs reveal" role="tablist" aria-label="Skill categories">
+          <button class="skill-tab is-active" role="tab" aria-selected="true" data-filter="all">All</button>
+          <button class="skill-tab" role="tab" aria-selected="false" data-filter="frontend">Front-End</button>
+          <button class="skill-tab" role="tab" aria-selected="false" data-filter="backend">Back-End</button>
+          <button class="skill-tab" role="tab" aria-selected="false" data-filter="database">Databases</button>
+          <button class="skill-tab" role="tab" aria-selected="false" data-filter="tools">Tools, AI &amp; Platforms</button>
+          <button class="skill-tab" role="tab" aria-selected="false" data-filter="personal">Strengths</button>
+        </div>
+
+        <div class="skills-grid" id="skillsGrid">
+          <!-- Languages -->
+          <article class="skill-card reveal" data-cat="frontend backend">
+            <h3 class="skill-card__title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4M6 8l-4 4 4 4M14.5 4l-5 16"/></svg>
+              Programming Languages
+            </h3>
+            <ul class="tag-list">
+              <li class="tag">JavaScript</li><li class="tag">TypeScript</li><li class="tag">Python</li>
+              <li class="tag">SQL</li><li class="tag">HTML5</li><li class="tag">CSS3</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal" data-cat="frontend">
+            <h3 class="skill-card__title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              Front-End Development
+            </h3>
+            <ul class="tag-list">
+              <li class="tag">Angular</li><li class="tag">React.js</li><li class="tag">Next.js</li>
+              <li class="tag">Responsive Web Design</li><li class="tag">DOM Manipulation</li>
+              <li class="tag">Cross-Browser Compatibility</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal" data-cat="backend">
+            <h3 class="skill-card__title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 6h.01M6 18h.01"/></svg>
+              Back-End Development
+            </h3>
+            <ul class="tag-list">
+              <li class="tag">Node.js</li><li class="tag">Express.js</li><li class="tag">RESTful APIs</li>
+              <li class="tag">Webhooks</li><li class="tag">JSON</li>
+              <li class="tag">Auth &amp; Authorization</li><li class="tag">Server-Side Development</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal" data-cat="backend tools">
+            <h3 class="skill-card__title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
+              Message Queues
+            </h3>
+            <ul class="tag-list">
+              <li class="tag">RabbitMQ (RMQ)</li><li class="tag">Async Message Processing</li>
+              <li class="tag">Queue-Based Architecture</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal" data-cat="database">
+            <h3 class="skill-card__title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5M3 12a9 3 0 0 0 18 0"/></svg>
+              Databases
+            </h3>
+            <ul class="tag-list">
+              <li class="tag">MySQL</li><li class="tag">PostgreSQL</li><li class="tag">SQL Queries</li>
+              <li class="tag">Relational Database Design</li><li class="tag">CRUD Operations</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal" data-cat="backend tools">
+            <h3 class="skill-card__title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              APIs &amp; Platforms
+            </h3>
+            <ul class="tag-list">
+              <li class="tag">WhatsApp Business API</li><li class="tag">RCS (JBM)</li>
+              <li class="tag">SMS Gateway Integration</li><li class="tag">CPaaS</li>
+              <li class="tag">Third-Party API Integration</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal" data-cat="tools">
+            <h3 class="skill-card__title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              Tools &amp; Version Control
+            </h3>
+            <ul class="tag-list">
+              <li class="tag">Git</li><li class="tag">GitHub</li><li class="tag">Postman</li>
+              <li class="tag">PuTTY (SSH)</li><li class="tag">WinSCP (SFTP)</li>
+              <li class="tag">VS Code</li><li class="tag">npm</li><li class="tag">Linux Server Access</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal" data-cat="tools">
+            <h3 class="skill-card__title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              Methodologies
+            </h3>
+            <ul class="tag-list">
+              <li class="tag">Agile</li><li class="tag">Scrum</li><li class="tag">SDLC</li>
+              <li class="tag">Full Stack Development</li><li class="tag">OOP</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal" data-cat="tools">
+            <h3 class="skill-card__title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg>
+              AI-Assisted Development
+            </h3>
+            <ul class="tag-list">
+              <li class="tag">Cursor</li><li class="tag">Claude Code</li><li class="tag">ChatGPT</li>
+              <li class="tag">AI Pair Programming</li><li class="tag">Prompt Engineering</li>
+              <li class="tag">AI Chatbot Integration</li>
+            </ul>
+          </article>
+
+          <article class="skill-card skill-card--soft reveal" data-cat="personal">
+            <h3 class="skill-card__title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              Personal Strengths
+            </h3>
+            <ul class="tag-list">
+              <li class="tag">Self-Motivated</li><li class="tag">Team Collaboration</li>
+              <li class="tag">Time Management</li><li class="tag">Communication</li>
+              <li class="tag">Problem Solving</li><li class="tag">Ownership</li>
+              <li class="tag">Adaptability</li><li class="tag">Fast Learner</li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- Proficiency bars -->
+        <div class="prof reveal">
+          <h3 class="prof__title">Core proficiency</h3>
+          <div class="prof__grid" id="profGrid">
+            <div class="prof__item"><div class="prof__row"><span>JavaScript / TypeScript</span><span class="prof__pct">90%</span></div><div class="bar"><div class="bar__fill" data-width="90"></div></div></div>
+            <div class="prof__item"><div class="prof__row"><span>Node.js / Express.js</span><span class="prof__pct">88%</span></div><div class="bar"><div class="bar__fill" data-width="88"></div></div></div>
+            <div class="prof__item"><div class="prof__row"><span>Angular</span><span class="prof__pct">85%</span></div><div class="bar"><div class="bar__fill" data-width="85"></div></div></div>
+            <div class="prof__item"><div class="prof__row"><span>React.js / Next.js</span><span class="prof__pct">85%</span></div><div class="bar"><div class="bar__fill" data-width="85"></div></div></div>
+            <div class="prof__item"><div class="prof__row"><span>MySQL / PostgreSQL</span><span class="prof__pct">85%</span></div><div class="bar"><div class="bar__fill" data-width="85"></div></div></div>
+            <div class="prof__item"><div class="prof__row"><span>RabbitMQ</span><span class="prof__pct">75%</span></div><div class="bar"><div class="bar__fill" data-width="75"></div></div></div>
+            <div class="prof__item"><div class="prof__row"><span>REST APIs / Webhooks</span><span class="prof__pct">90%</span></div><div class="bar"><div class="bar__fill" data-width="90"></div></div></div>
+            <div class="prof__item"><div class="prof__row"><span>Python</span><span class="prof__pct">70%</span></div><div class="bar"><div class="bar__fill" data-width="70"></div></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__eyebrow">03 — Experience</span>
+          <h2 class="section__title">Where I've worked</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="tl-item reveal">
+            <div class="tl-dot" aria-hidden="true"></div>
+            <div class="tl-card">
+              <div class="tl-card__head">
+                <div>
+                  <h3 class="tl-card__role">Full Stack Developer</h3>
+                  <p class="tl-card__org">GreenAds Global Private Limited <span class="tl-card__sep">·</span> <span class="tl-card__product">Telinfy Messaging Platform</span></p>
+                </div>
+                <span class="chip chip--live">12/2024 — Present</span>
+              </div>
+
+              <ul class="tl-card__list">
+                <li>Develop and maintain <strong>Telinfy</strong>, an omnichannel CPaaS platform unifying WhatsApp Business API, RCS, SMS and Voice for <strong>500+ business clients</strong>, processing <strong>10M+ messages per month</strong>.</li>
+                <li>Design and build <strong>RESTful APIs</strong> with Node.js and Express.js on MySQL and PostgreSQL — powering campaign execution, message routing, contact management and analytics.</li>
+                <li>Build responsive, client-facing dashboards in <strong>Angular, React.js and Next.js</strong> for campaign creation, contact and template management, and delivery reporting.</li>
+                <li>Develop <strong>unified, follow-up and fallback campaign modules</strong> that launch multi-channel campaigns from a single workflow and auto-retry on an alternate channel when the primary fails.</li>
+                <li>Work with <strong>RabbitMQ</strong> message queues for asynchronous, high-throughput processing across channels.</li>
+                <li>Implement <strong>webhook handling</strong> for delivery receipts and inbound messages, keeping message status and conversation state synchronised in real time.</li>
+                <li>Troubleshoot Linux application servers via <strong>PuTTY (SSH)</strong> and <strong>WinSCP (SFTP)</strong> to review logs and diagnose production issues.</li>
+                <li>Integrate third-party APIs including <strong>Meta WhatsApp Business API</strong> and <strong>JBM for RCS</strong>, debugging production delivery issues to improve campaign reliability.</li>
+                <li>Contribute to the <strong>agent inbox</strong> for two-way conversations and the <strong>AI-powered chatbot</strong> module that automates replies and lead qualification.</li>
+                <li>Collaborate in a <strong>5-engineer Agile team</strong>, delivering features end to end and participating in code reviews and requirement discussions.</li>
+              </ul>
+
+              <ul class="tag-list tag-list--sm">
+                <li class="tag">Node.js</li><li class="tag">Express.js</li><li class="tag">Angular</li>
+                <li class="tag">React.js</li><li class="tag">Next.js</li><li class="tag">MySQL</li>
+                <li class="tag">PostgreSQL</li><li class="tag">RabbitMQ</li><li class="tag">WhatsApp API</li>
+                <li class="tag">RCS</li><li class="tag">Webhooks</li><li class="tag">Git</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="tl-item reveal">
+            <div class="tl-dot" aria-hidden="true"></div>
+            <div class="tl-card">
+              <div class="tl-card__head">
+                <div>
+                  <h3 class="tl-card__role">Web Development Intern</h3>
+                  <p class="tl-card__org">Navodita Infotech <span class="tl-card__sep">·</span> India</p>
+                </div>
+                <span class="chip">2024</span>
+              </div>
+
+              <ul class="tl-card__list">
+                <li>Designed and deployed a responsive developer portfolio web application using <strong>HTML, CSS and JavaScript</strong>, applying responsive web design principles and modern front-end practices.</li>
+                <li>Repository: <a href="https://github.com/ajaykalakoti/Portfolio" target="_blank" rel="noopener noreferrer" class="link">github.com/ajaykalakoti/Portfolio</a></li>
+              </ul>
+
+              <ul class="tag-list tag-list--sm">
+                <li class="tag">HTML5</li><li class="tag">CSS3</li><li class="tag">JavaScript</li><li class="tag">Responsive Design</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section section--alt" id="projects">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__eyebrow">04 — Projects</span>
+          <h2 class="section__title">Things I've built</h2>
+          <p class="section__sub">Production platforms, academic research and shipped mobile apps.</p>
+        </div>
+
+        <div class="projects">
+          <article class="proj reveal proj--feature">
+            <div class="proj__top">
+              <div class="proj__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </div>
+              <span class="chip chip--live"><span class="pulse-dot" aria-hidden="true"></span> In Production</span>
+            </div>
+
+            <h3 class="proj__title">Telinfy — Omnichannel CPaaS Platform</h3>
+            <p class="proj__desc">
+              An enterprise communications platform unifying <strong>WhatsApp Business API, RCS, SMS and Voice</strong>
+              into a single workflow. I build the REST APIs, campaign engine, dashboards and webhook pipeline that
+              serve <strong>500+ business clients</strong> and move <strong>10M+ messages every month</strong>.
+            </p>
+
+            <div class="proj__split">
+              <div>
+                <ul class="proj__points">
+                  <li>Unified, follow-up and fallback campaign modules with automatic cross-channel retry</li>
+                  <li>RabbitMQ-backed async processing for high-throughput delivery</li>
+                  <li>Real-time delivery receipts and inbound message sync via webhooks</li>
+                  <li>Agent inbox for two-way conversations + AI chatbot for lead qualification</li>
+                  <li>Integrations with Shopify, Zoho, WooCommerce and Google Sheets</li>
+                </ul>
+
+                <ul class="tag-list tag-list--sm">
+                  <li class="tag">Node.js</li><li class="tag">Express.js</li><li class="tag">Angular</li>
+                  <li class="tag">Next.js</li><li class="tag">PostgreSQL</li><li class="tag">RabbitMQ</li>
+                  <li class="tag">Meta WhatsApp API</li>
+                </ul>
+              </div>
+
+              <!-- Channel fallback flow -->
+              <figure class="flow" aria-label="Diagram: a campaign is queued through RabbitMQ and routed across WhatsApp, RCS, SMS and Voice, falling back to the next channel on failure.">
+                <figcaption class="flow__cap">Fallback routing</figcaption>
+
+                <div class="flow__node flow__node--src">
+                  <span class="flow__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+                  </span>
+                  Campaign
+                </div>
+
+                <div class="flow__pipe"><span class="flow__packet"></span></div>
+
+                <div class="flow__node flow__node--queue">
+                  <span class="flow__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
+                  </span>
+                  RabbitMQ
+                </div>
+
+                <div class="flow__pipe"><span class="flow__packet flow__packet--2"></span></div>
+
+                <ul class="flow__channels">
+                  <li class="flow__chan flow__chan--wa">WhatsApp <span class="flow__state">sent</span></li>
+                  <li class="flow__chan flow__chan--rcs">RCS <span class="flow__state">fallback</span></li>
+                  <li class="flow__chan flow__chan--sms">SMS <span class="flow__state">fallback</span></li>
+                  <li class="flow__chan flow__chan--voice">Voice <span class="flow__state">fallback</span></li>
+                </ul>
+              </figure>
+            </div>
+          </article>
+
+          <article class="proj reveal">
+            <div class="proj__top">
+              <div class="proj__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              </div>
+            </div>
+
+            <h3 class="proj__title">Securing Data with Blockchain &amp; AI</h3>
+            <p class="proj__desc">
+              A data-security solution combining <strong>blockchain integrity verification</strong> with
+              <strong>AI anomaly detection</strong> to protect records from tampering — hashes chained for
+              immutability, ML flagging suspicious access patterns.
+            </p>
+
+            <ul class="proj__points">
+              <li>Blockchain ledger for tamper-evident record integrity</li>
+              <li>Machine learning model for anomaly detection on data access</li>
+            </ul>
+
+            <ul class="tag-list tag-list--sm">
+              <li class="tag">Python</li><li class="tag">Blockchain</li><li class="tag">Machine Learning</li>
+            </ul>
+          </article>
+
+          <article class="proj reveal">
+            <div class="proj__top">
+              <div class="proj__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+              </div>
+              <span class="chip chip--live">Live on Play Store</span>
+            </div>
+
+            <h3 class="proj__title">Vijaya Educational App</h3>
+            <p class="proj__desc">
+              An Android application connecting students and faculty for college announcements and
+              two-way communication. Published and live on Google Play.
+            </p>
+
+            <ul class="proj__points">
+              <li>College announcement feed for students and faculty</li>
+              <li>Two-way communication between staff and students</li>
+            </ul>
+
+            <ul class="tag-list tag-list--sm">
+              <li class="tag">Android</li><li class="tag">Mobile</li>
+            </ul>
+
+            <a class="proj__link" href="https://play.google.com/store/apps/details?id=co.diy7.diion" target="_blank" rel="noopener noreferrer">
+              View on Google Play
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+            </a>
+          </article>
+
+          <article class="proj reveal">
+            <div class="proj__top">
+              <div class="proj__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
+              </div>
+            </div>
+
+            <h3 class="proj__title">Developer Portfolio Web App</h3>
+            <p class="proj__desc">
+              A responsive developer portfolio built during my internship at Navodita Infotech using
+              vanilla <strong>HTML, CSS and JavaScript</strong>, applying responsive design principles
+              and modern front-end practices.
+            </p>
+
+            <ul class="proj__points">
+              <li>Mobile-first responsive layout, cross-browser tested</li>
+              <li>Hand-written CSS with no framework dependencies</li>
+            </ul>
+
+            <ul class="tag-list tag-list--sm">
+              <li class="tag">HTML5</li><li class="tag">CSS3</li><li class="tag">JavaScript</li>
+            </ul>
+
+            <a class="proj__link" href="https://github.com/ajaykalakoti/Portfolio" target="_blank" rel="noopener noreferrer">
+              View on GitHub
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION & CERTS ============ -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__eyebrow">05 — Education</span>
+          <h2 class="section__title">Education &amp; certifications</h2>
+        </div>
+
+        <div class="edu">
+          <div class="edu__col reveal">
+            <h3 class="edu__col-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>
+              Education
+            </h3>
+
+            <article class="edu-card">
+              <div class="edu-card__head">
+                <h4>B.Tech — Computer Science &amp; Engineering</h4>
+                <span class="chip">2024</span>
+              </div>
+              <p class="edu-card__spec">Artificial Intelligence &amp; Machine Learning</p>
+              <p class="edu-card__org">Vijaya Engineering College (JNTU Hyderabad)<br />Khammam, Telangana, India</p>
+              <div class="edu-card__meta">
+                <span class="meta-pill"><strong>CGPA</strong> 7.96 / 10</span>
+                <span class="meta-pill"><strong>Graduated</strong> 2024</span>
+              </div>
+            </article>
+
+            <article class="edu-card">
+              <div class="edu-card__head">
+                <h4>Languages</h4>
+              </div>
+              <ul class="tag-list tag-list--sm">
+                <li class="tag">English</li><li class="tag">Hindi</li><li class="tag">Telugu</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="edu__col reveal">
+            <h3 class="edu__col-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg>
+              Certifications
+            </h3>
+
+            <article class="cert-card">
+              <div class="cert-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              </div>
+              <div>
+                <h4>Python Full Stack Developer Foundation</h4>
+                <p>BitLabs</p>
+              </div>
+            </article>
+
+            <article class="cert-card">
+              <div class="cert-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              </div>
+              <div>
+                <h4>Machine Learning with Python</h4>
+                <p>E&amp;ICT Academy, IIT Kanpur</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section section--alt" id="contact">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__eyebrow">06 — Contact</span>
+          <h2 class="section__title">Let's build something</h2>
+          <p class="section__sub">Open to full-time roles, freelance projects and website builds. The fastest way to reach me is email.</p>
+        </div>
+
+        <div class="avail reveal">
+          <article class="avail__card">
+            <div class="avail__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            </div>
+            <div>
+              <h3>Full-Time Roles</h3>
+              <p>Full stack positions where I can own features end to end across front-end, back-end and database.</p>
+            </div>
+          </article>
+
+          <article class="avail__card">
+            <div class="avail__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 15.09 8.26 22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <div>
+              <h3>Freelance Projects</h3>
+              <p>APIs, dashboards, integrations and messaging workflows — scoped and delivered independently.</p>
+            </div>
+          </article>
+
+          <article class="avail__card">
+            <div class="avail__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <div>
+              <h3>Website Development</h3>
+              <p>Responsive, fast, accessible websites and web apps — built from design through to deployment.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="contact">
+          <div class="contact__info reveal">
+            <a class="contact-card" href="mailto:ajaykalakoti34@gmail.com">
+              <div class="contact-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </div>
+              <div>
+                <span class="contact-card__label">Email</span>
+                <span class="contact-card__value">ajaykalakoti34@gmail.com</span>
+                <span class="contact-card__value contact-card__value--alt">ajaykalakota11042002@gmail.com</span>
+              </div>
+            </a>
+
+            <a class="contact-card" href="tel:+917337522120">
+              <div class="contact-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <span class="contact-card__label">Phone</span>
+                <span class="contact-card__value">+91 73375 22120</span>
+              </div>
+            </a>
+
+            <a class="contact-card" href="https://linkedin.com/in/ajay-kalakota-b8051227a" target="_blank" rel="noopener noreferrer">
+              <div class="contact-card__icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+              </div>
+              <div>
+                <span class="contact-card__label">LinkedIn</span>
+                <span class="contact-card__value">ajay-kalakota-b8051227a</span>
+              </div>
+            </a>
+
+            <a class="contact-card" href="https://github.com/ajaykalakoti" target="_blank" rel="noopener noreferrer">
+              <div class="contact-card__icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.28-1.55 3.29-1.23 3.29-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </div>
+              <div>
+                <span class="contact-card__label">GitHub</span>
+                <span class="contact-card__value">github.com/ajaykalakoti</span>
+              </div>
+            </a>
+
+            <div class="contact-card contact-card--static">
+              <div class="contact-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <span class="contact-card__label">Location</span>
+                <span class="contact-card__value">Hyderabad, Telangana, India</span>
+              </div>
+            </div>
+
+            <a class="contact-card contact-card--cta" href="assets/Ajay-Kalakota-Full-Stack-Developer.pdf" download>
+              <div class="contact-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5M12 15V3"/></svg>
+              </div>
+              <div>
+                <span class="contact-card__label">Resume</span>
+                <span class="contact-card__value">Download PDF — 1 page</span>
+              </div>
+            </a>
+          </div>
+
+          <form class="contact__form reveal" id="contactForm" novalidate
+                action="https://formsubmit.co/ajax/ajaykalakoti34@gmail.com" method="POST">
+            <!-- Honeypot: bots fill this, humans never see it. -->
+            <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required />
+              <span class="field__error" data-error-for="name"></span>
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@company.com" required />
+              <span class="field__error" data-error-for="email"></span>
+            </div>
+
+            <div class="field">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="What's this about?" required />
+              <span class="field__error" data-error-for="subject"></span>
+            </div>
+
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about the role or project..." required></textarea>
+              <span class="field__error" data-error-for="message"></span>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--block" id="submitBtn">
+              <span class="btn__label">Send Message</span>
+              <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg>
+              <span class="spinner" aria-hidden="true"></span>
+            </button>
+
+            <p class="form__note">Goes straight to my inbox — I usually reply within a day.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <a href="#hero" class="nav__logo">Ajay<span class="accent">.</span></a>
+        <p class="footer__tag">Full Stack Developer — Hyderabad, India</p>
+      </div>
+
+      <nav class="footer__links" aria-label="Footer navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="footer__socials">
+        <a href="https://github.com/ajaykalakoti" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.28-1.55 3.29-1.23 3.29-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/ajay-kalakota-b8051227a" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+        </a>
+        <a href="mailto:ajaykalakoti34@gmail.com" class="social-link" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>
+        &copy; <span id="year"></span> Ajay Kalakota — designed, built and shipped in Hyderabad, India.
+      </p>
+      <p class="footer__note">
+        Currently building <strong>Telinfy</strong> at GreenAds Global · Open to full stack opportunities
+      </p>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
