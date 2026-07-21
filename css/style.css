@@ -706,11 +706,12 @@ html[data-theme='dark'] .icon-moon { display: none; }
 .snapshot__cta:hover { gap: 12px; background: color-mix(in srgb, var(--brand) 18%, transparent); }
 .snapshot__cta svg { width: 15px; height: 15px; }
 
-/* Cards run the full width below the prose, so four of them get real room
-   instead of being squeezed into a side column. */
+/* Cards run the full width below the prose, so they get real room instead of
+   being squeezed into a side column. auto-fit rather than a fixed count, so
+   adding a card never strands one alone on its own row. */
 .about__cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
   gap: 16px;
 }
 
